@@ -8,7 +8,7 @@ function CategorizeProduct() {
 
     const handleGenerate = async () => {
         try {
-            const response = await axios.post('http://localhost:5000/chat', { text: input });
+            const response = await axios.post('http://localhost:5001/chat', { text: input });
             setOutput(response.data.reply);
             setSubmitted(true); // Mark the form as submitted
         } catch (error) {
